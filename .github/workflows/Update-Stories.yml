@@ -32,6 +32,11 @@ jobs:
           
           git add --all
           git commit -m 'Updating TuringDataStories submodule and adding new notebooks'
-          git push
+          
+      # Push changes in a way that triggers other actions
+      - name: Push changes
+            uses: ad-m/github-push-action@master
+            with:
+              github_token: ${{ secrets.PAT}}
           
           
