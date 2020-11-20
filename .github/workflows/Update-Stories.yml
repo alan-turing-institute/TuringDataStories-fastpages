@@ -23,6 +23,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           git submodule update --rebase --remote
+          ls
           cp TuringDataStories/stories/*.ipynb _notebooks/
           
           
