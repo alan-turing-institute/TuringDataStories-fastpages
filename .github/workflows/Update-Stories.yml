@@ -22,9 +22,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Update TuringDataStories and add new notebooks
         run: |
+          git config --global user.name 'Sam Van Stroud'
+          git config --global user.email 'sam.van.stroud@cern.ch'
+          
           git submodule init
           git submodule update --init --rebase --remote
+          
           cp TuringDataStories/stories/*.ipynb _notebooks/
+          
           git add --all
           git commit -m 'Updating TuringDataStories submodule and adding new notebooks'
           git push
