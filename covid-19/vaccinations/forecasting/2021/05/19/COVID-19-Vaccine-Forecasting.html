@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      43 min read
+      42 min read
     
 </span></p>
 
@@ -174,17 +174,21 @@ Twitter: <a href="https://twitter.com/wmfinnegan">@wmfinnegan</a>.</li>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>In this story you can find the technical descriptions in a block quote like this one. If the technical side is not your thing feel free to skip it and hide the code cells 😊</p>
-</blockquote>
+<p><div class="flash">
+    <svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    In this story you can find the technical descriptions in a blue box like this one. If the technical side is not your thing feel free to skip it and hide the code cells 😊
+</div></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Setup">Setup<a class="anchor-link" href="#Setup"> </a></h2><div style="background-color:#DEECFD; padding:10px; margin:10px;">
-For this analysis we'll be using the <a href="https://docs.python-requests.org/en/master/">requests</a> and <a href="https://docs.python.org/3/library/json.html">json</a> libraries for interacting with data from the internet, <a href="https://numpy.org/">numpy</a>, <a href="https://pandas.pydata.org/">pandas</a> and <a href="https://docs.python.org/3/library/datetime.html">datetime</a> for manipulating and analysing data and dates, and <a href="https://matplotlib.org/">matplotlib</a> and <a href="https://seaborn.pydata.org/">seaborn</a> for visualising data. In the cell below we also configure some of the defaults for the style of matplotlib figures, in particular increasing the font size.
-</div>
+<h2 id="Setup">Setup<a class="anchor-link" href="#Setup"> </a></h2><p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    For this analysis we&#8217;ll be using the <a href="https://docs.python-requests.org/en/master/">requests</a> and <a href="https://docs.python.org/3/library/json.html">json</a> libraries for interacting with data from the internet, <a href="https://numpy.org/">numpy</a>, <a href="https://pandas.pydata.org/">pandas</a> and <a href="https://docs.python.org/3/library/datetime.html">datetime</a> for manipulating and analysing data and dates, and <a href="https://matplotlib.org/">matplotlib</a> and <a href="https://seaborn.pydata.org/">seaborn</a> for visualising data. In the cell below we also configure some of the defaults for the style of matplotlib figures, in particular increasing the font size.
+</div></p>
+
 </div>
 </div>
 </div>
@@ -235,43 +239,19 @@ For this analysis we'll be using the <a href="https://docs.python-requests.org/e
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><div class="flash">
-    <svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    test
-</div></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Technical:test</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Step 3:</strong> Submitting the API query. We can now package our parameters up into the structure required by the API, and  send our query using the <code>requests.get</code> function. If the query is successful we should see a status code of 200 (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses">as per the convention for request status codes</a>). If not it should also come back with a useful error message to diagnose the problem with our query.
-</div></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Getting-the-Data">Getting the Data<a class="anchor-link" href="#Getting-the-Data"> </a></h2><p>The government has developed a Coronavirus dashboard which is updated daily with key statistics including the number of Covid-19 tests, cases, hospitalisations, deaths and vaccinations. You can view the dashboard here: <a href="https://coronavirus.data.gov.uk/">https://coronavirus.data.gov.uk/</a></p>
-<p>All of the source data can be downloaded, for example as a spreadsheet, by clicking the "download" button under each table or graph. Even better for our purposes is that the dashboard has an "Application Programming Interface" (API), which we can use to extract precisely the data we're interested in programmatically for this notebook!</p>
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
-The documentation for the API is found under the ["Developer's Guide" section](https://coronavirus.data.gov.uk/details/developers-guide) of the dashboard, which describes the various parameters that are available and how they should be configured. In particular, there are Python examples which show us how to structure a data query. There are three main steps, as follows:
+<p>All of the source data can be downloaded, for example as a spreadsheet, by clicking the "download" button under each table or graph. Even better for our purposes is that the dashboard has an "Application Programming Interface" (API), which we can use to extract precisely the data we're interested in programmatically for this notebook!
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    The documentation for the API is found under the <a href="https://coronavirus.data.gov.uk/details/developers-guide">"Developer&#8217;s Guide" section</a> of the dashboard, which describes the various parameters that are available and how they should be configured. In particular, there are Python examples which show us how to structure a data query. There are three main steps, as follows:
+</div><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Step 1:</strong> Defining the geographical region we are interested in. Some of the data is available regionally as well as nationally. The number of positive cases, for example, is available both for the UK as a whole but also down to "local authority" level (local council areas, of which there are over 300 in England alone). It&#8217;s possible to get vaccine data for each of the four nations in the UK separately, but for this story we&#8217;ll only consider the UK as a whole.
+</div><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    In the API, to define that we wish to retrieve summary data for the whole UK we must set the <code>areaType</code> parameter to be the value "overview", as follows:
+</div></p>
 
-**Step 1:** Defining the geographical region we are interested in. Some of the data is available regionally as well as nationally. The number of positive cases, for example, is available both for the UK as a whole but also down to "local authority" level (local council areas, of which there are over 300 in England alone). It's possible to get vaccine data for each of the four nations in the UK separately, but for this story we'll only consider the UK as a whole.
-
-In the API, to define that we wish to retrieve summary data for the whole UK we must set the `areaType` parameter to be the value "overview", as follows:
-</div>
 </div>
 </div>
 </div>
@@ -294,14 +274,17 @@ In the API, to define that we wish to retrieve summary data for the whole UK we 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Step 2:</strong> Defining which data we wish to retrieve. To explore the status of the vaccination programme we would like to know the number of new first and second vaccine doses administered on each day, and the overall (cumulative) total of first and second doses administered up to and including each day.
+</div><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    In the API these fields are given long names like <code>newPeopleVaccinatedFirstDoseByPublishDate</code>. Finding the correct names for the data you&#8217;re interested can be a bit tricky. Most are listed in the documentation but not all - the vaccination data has been added fairly recently and isn&#8217;t documented, for example. Usually the field names for the API match the column names in files downloaded from the website, so you can do some super sleuthing and find them that way if you&#8217;d like to try an analysis with different data!
+</div><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    As the names are long, the API helpfully let&#8217;s us rename them to something more convenient using the dictionary format seen below. We&#8217;ll call the cumulative totals <code>cumFirst</code> and <code>cumSecond</code>, and the new doses each day <code>newFirst</code> and <code>newSecond</code>. Finally, to pass this dictionary to the API it must be converted into a string without any spaces, which we achieve using the <code>json.dumps</code> function.
+</div></p>
 
-**Step 2:** Defining which data we wish to retrieve. To explore the status of the vaccination programme we would like to know the number of new first and second vaccine doses administered on each day, and the overall (cumulative) total of first and second doses administered up to and including each day.
-
-In the API these fields are given long names like `newPeopleVaccinatedFirstDoseByPublishDate`. Finding the correct names for the data you're interested can be a bit tricky. Most are listed in the documentation but not all - the vaccination data has been added fairly recently and isn't documented, for example. Usually the field names for the API match the column names in files downloaded from the website, so you can do some super sleuthing and find them that way if you'd like to try an analysis with different data!
-
-As the names are long, the API helpfully let's us rename them to something more convenient using the dictionary format seen below. We'll call the cumulative totals `cumFirst` and `cumSecond`, and the new doses each day `newFirst` and `newSecond`. Finally, to pass this dictionary to the API it must be converted into a string without any spaces, which we achieve using the `json.dumps` function.
-</div>
 </div>
 </div>
 </div>
@@ -337,10 +320,11 @@ As the names are long, the API helpfully let's us rename them to something more 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Step 3:</strong> Submitting the API query. We can now package our parameters up into the structure required by the API, and  send our query using the <code>requests.get</code> function. If the query is successful we should see a status code of 200 (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses">as per the convention for request status codes</a>). If not it should also come back with a useful error message to diagnose the problem with our query.
+</div></p>
 
-**Step 3:** Submitting the API query. We can now package our parameters up into the structure required by the API, and  send our query using the `requests.get` function. If the query is successful we should see a status code of 200 ([as per the convention for request status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)). If not it should also come back with a useful error message to diagnose the problem with our query.
-</div>
 </div>
 </div>
 </div>
@@ -376,10 +360,11 @@ As the names are long, the API helpfully let's us rename them to something more 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Our query was successful, but where is the data? We can convert the data the request contains into a Python function using the <code>.json()</code> method on the response, and then look at what fields are contained in the data (the keys of the dictionary):
+</div></p>
 
-Our query was successful, but where is the data? We can convert the data the request contains into a Python function using the `.json()` method on the response, and then look at what fields are contained in the data (the keys of the dictionary):
-</div>
 </div>
 </div>
 </div>
@@ -426,10 +411,11 @@ Our query was successful, but where is the data? We can convert the data the req
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    This doesn&#8217;t look like the vaccination data we&#8217;re expecting yet. The response also includes metadata about our query, in particular whether we queried too much data to return in one go. If the "length" of our query was larger than the  "maxPageLimit" we&#8217;d have to split our query into multiple queries.
+</div></p>
 
-This doesn't look like the vaccination data we're expecting yet. The response also includes metadata about our query, in particular whether we queried too much data to return in one go. If the "length" of our query was larger than the  "maxPageLimit" we'd have to split our query into multiple queries.
-</div>
 </div>
 </div>
 </div>
@@ -466,10 +452,11 @@ This doesn't look like the vaccination data we're expecting yet. The response al
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    In this case we are a long way under the limit so we should have all the data. To find it we can have a look at one of the elements in the "data" list:
+</div></p>
 
-In this case we are a long way under the limit so we should have all the data. To find it we can have a look at one of the elements in the "data" list:
-</div>
 </div>
 </div>
 </div>
@@ -506,10 +493,11 @@ In this case we are a long way under the limit so we should have all the data. T
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Each element of the "data" list contains the vaccination data for one day. To make it easier to analyse the data we can convert it to a pandas data frame, using the date as the unique index for the rows (as we have one row for each day). We also take care to properly convert the date string representations into actual Python datetimes, so we can benefit from pandas&#8217; features for processing time series data. We also convert the numbers into units of 1 million to make them easier to read in figures and tables later.
+</div></p>
 
-Each element of the "data" list contains the vaccination data for one day. To make it easier to analyse the data we can convert it to a pandas data frame, using the date as the unique index for the rows (as we have one row for each day). We also take care to properly convert the date string representations into actual Python datetimes, so we can benefit from pandas' features for processing time series data. We also convert the numbers into units of 1 million to make them easier to read in figures and tables later.
-</div>
 </div>
 </div>
 </div>
@@ -631,10 +619,11 @@ Each element of the "data" list contains the vaccination data for one day. To ma
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Later on, it will also be helpful to have data on the total number of doses given, i.e. the number of first doses plus the number of second doses. Pandas let&#8217;s us quickly create new columns for these values, as follows:
+</div></p>
 
-Later on, it will also be helpful to have data on the total number of doses given, i.e. the number of first doses plus the number of second doses. Pandas let's us quickly create new columns for these values, as follows:
-</div>
 </div>
 </div>
 </div>
@@ -661,10 +650,11 @@ Later on, it will also be helpful to have data on the total number of doses give
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Our query above gets all the data up to the current date. To ensure re-running the notebook reproduces the same results from the time of writing only data up to 4th May should be included, which is done using the <code>run_as_date</code> variable below. If you&#8217;d like to see the latest results instead you can change the value to today&#8217;s date.
+</div></p>
 
-Our query above gets all the data up to the current date. To ensure re-running the notebook reproduces the same results from the time of writing only data up to 4th May should be included, which is done using the `run_as_date` variable below. If you'd like to see the latest results instead you can change the value to today's date.
-</div>
 </div>
 </div>
 </div>
@@ -860,12 +850,14 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    It&#8217;s helpful to visualise the data, so before continuing we will do a bit of work here to set up plotting functions we can re-use throughout our analysis. First let&#8217;s define colours and labels to use for the data columns in all the figures we create. These are in the <code>col_format</code> dictionary below, which all our plotting functions can access.
+</div><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Then we define a function <code>plot_column</code>, which uses the pandas <code>plot</code> function to plot a column from the dataset in our chosen style. It also includes options to display a weekly rolling average of the data, rather than the original raw data, calculated using the statement <code>df[column].rolling(window=7).mean()</code> below (where <code>window=7</code> means we calculate the average across 7 days). Finally, it will be helpful to distinguish between actual historical vaccine data, and estimates from the forecasts we create. If the <code>forecast_date</code> argument is defined the data after that date will be plotted with a dashed line instead of a solid line. The data after that date is selected using the statement <code>data[data.index &gt;= forecast_date]</code>.
+</div></p>
 
-It's helpful to visualise the data, so before continuing we will do a bit of work here to set up plotting functions we can re-use throughout our analysis. First let's define colours and labels to use for the data columns in all the figures we create. These are in the `col_format` dictionary below, which all our plotting functions can access.
-
-Then we define a function `plot_column`, which uses the pandas `plot` function to plot a column from the dataset in our chosen style. It also includes options to display a weekly rolling average of the data, rather than the original raw data, calculated using the statement `df[column].rolling(window=7).mean()` below (where `window=7` means we calculate the average across 7 days). Finally, it will be helpful to distinguish between actual historical vaccine data, and estimates from the forecasts we create. If the `forecast_date` argument is defined the data after that date will be plotted with a dashed line instead of a solid line. The data after that date is selected using the statement `data[data.index &gt;= forecast_date]`.
-</div>
 </div>
 </div>
 </div>
@@ -944,12 +936,14 @@ Then we define a function `plot_column`, which uses the pandas `plot` function t
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    As well as showing the number of doses, we&#8217;d like to show when the number of people vaccinated (with 1st or 2nd doses) exceeds the total of each priority sub-group. For each group, we can find the date this happened using the statement <code>df[df[column] &gt;= (pop - tol)].index[0]</code>, where <code>pop</code> is the population of the sub-group, <code>column</code> is either <code>cumFirst</code> or <code>cumSecond</code> (depending on whether we want to calculate it for 1st or 2nd doses), and <code>tol</code> is a small value used to account for any rounding errors in the forecasts we do later.
+</div><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    The <code>annotate_group_completions</code> function below can then be used to add horizontal and vertical lines and text labels to a plot for those dates. As discussed earlier, we must remember that it&#8217;s not true that everyone in the priority group will have been vaccinated by the dates we calculate here, rather they are general indicators of overall progress.
+</div></p>
 
-As well as showing the number of doses, we'd like to show when the number of people vaccinated (with 1st or 2nd doses) exceeds the total of each priority sub-group. For each group, we can find the date this happened using the statement `df[df[column] &gt;= (pop - tol)].index[0]`, where `pop` is the population of the sub-group, `column` is either `cumFirst` or `cumSecond` (depending on whether we want to calculate it for 1st or 2nd doses), and `tol` is a small value used to account for any rounding errors in the forecasts we do later.
-
-The `annotate_group_completions` function below can then be used to add horizontal and vertical lines and text labels to a plot for those dates. As discussed earlier, we must remember that it's not true that everyone in the priority group will have been vaccinated by the dates we calculate here, rather they are general indicators of overall progress.
-</div>
 </div>
 </div>
 </div>
@@ -1004,10 +998,11 @@ The `annotate_group_completions` function below can then be used to add horizont
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Now we are almost there! The <code>plot_cumulative_doses</code> function below uses the two previous functions to construct a figure for the cumulative total of first and second doses:
+</div></p>
 
-Now we are almost there! The `plot_cumulative_doses` function below uses the two previous functions to construct a figure for the cumulative total of first and second doses:
-</div>
 </div>
 </div>
 </div>
@@ -1127,11 +1122,12 @@ Now we are almost there! The `plot_cumulative_doses` function below uses the two
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As stated in <a href="https://www.gov.uk/government/speeches/prime-ministers-address-to-the-nation-4-january-2021">Boris Johnson's address to the nation on 4th January 2021</a>, the first target the government set was to offer the first dose of a vaccine to everyone in the top four priority groups by mid-February. As we can see above this target was met on 13th February. The <a href="https://www.gov.uk/government/speeches/prime-ministers-statement-on-coronavirus-covid-19-10-february-2021">next target set by the government</a> was then to offer a first dose to the first nine priority groups (the over 50s) with a first dose by the end of April. This was somewhat pessimistic given the vaccination rates at the time, and was ultimately completed a couple of weeks earlier on 9th April. Overall, the start of the UK vaccination programme has been very successful and amongst the fastest in the world.</p>
-<p>It's also interesting to look at the daily number of new doses each day, and this is particularly relevant for forecasting future doses. As there's quite a large variation in the day to day totals (more on this later) it's helpful to look at weekly rolling averages as well. We'll also display the combined total of 1st and 2nd doses administered on each day (<code>newTot</code>), as this gives the best representation of the overall vaccine supply and capacity to administer vaccines.</p>
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p>It's also interesting to look at the daily number of new doses each day, and this is particularly relevant for forecasting future doses. As there's quite a large variation in the day to day totals (more on this later) it's helpful to look at weekly rolling averages as well. We'll also display the combined total of 1st and 2nd doses administered on each day (<code>newTot</code>), as this gives the best representation of the overall vaccine supply and capacity to administer vaccines.
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    We can create a similar function to do this: 
+</div></p>
 
-We can create a similar function to do this: 
-</div>
 </div>
 </div>
 </div>
@@ -1207,11 +1203,12 @@ We can create a similar function to do this:
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Between January and until early February the vaccine doses administered per day steadily increased from around 0.25 million to 0.45 million on average. After that date rates plateaued and temporarily fell, mostly due to challenges and <a href="https://news.sky.com/story/covid-19-daily-drop-off-in-vaccinations-is-down-to-supply-fluctuations-but-will-pick-up-says-prof-jonathan-van-tam-12227465">fluctuations in securing vaccine supplies</a>. Late March saw the highest rates, peaking at 0.6 million doses per day in the week starting 14th March, though this then fell again, particularly over the Easter weekend (2nd-5th April), before recovering more recently. Supply difficulties are currently <a href="https://www.theguardian.com/politics/2021/apr/06/england-covid-vaccine-programme-could-slow-sharply-sage-warns">expected to continue in coming months</a>. As well as fluctuations in the total, we can see that the number of second doses administered has been steadily increasing, and overtook the rate of new first doses in early April, with relatively few new first doses being given since then. More on this later.</p>
-<p>If you look closely at the actual daily numbers of 1st and 2nd doses (the markers rather than the rolling average lines), it seems like they vary up and down with a period of 7 days. We can make this clearer by plotting the number of doses delivered on each weekday.</p>
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p>If you look closely at the actual daily numbers of 1st and 2nd doses (the markers rather than the rolling average lines), it seems like they vary up and down with a period of 7 days. We can make this clearer by plotting the number of doses delivered on each weekday.
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    The day of the week for all the dates in our data can be determined using the pandas function <code>day_name</code>. Then we make use of the <code>boxplot</code> function in the <code>seaborn</code> plotting library to show the distribution in doses delivered on each weekday:
+</div></p>
 
-The day of the week for all the dates in our data can be determined using the pandas function `day_name`. Then we make use of the `boxplot` function in the `seaborn` plotting library to show the distribution in doses delivered on each weekday:
-</div>
 </div>
 </div>
 </div>
@@ -1291,11 +1288,12 @@ The day of the week for all the dates in our data can be determined using the pa
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="When-are-Second-Doses-Being-Given?">When are Second Doses Being Given?<a class="anchor-link" href="#When-are-Second-Doses-Being-Given?"> </a></h2><p>A high-profile decision announced by the UK Joint Committee on Vaccination and Immunisation (JCVI) <a href="https://www.gov.uk/government/publications/priority-groups-for-coronavirus-covid-19-vaccination-advice-from-the-jcvi-30-december-2020/joint-committee-on-vaccination-and-immunisation-advice-on-priority-groups-for-covid-19-vaccination-30-december-2020">on the 30th December 2020</a>, was to delay second doses by as long as possible, up to 12 weeks instead of the originally recommended 3-4 weeks. The decision was taken to be able to protect as many people as possible with a single dose of the vaccine within the first few months of the year, but <a href="https://www.bmj.com/content/372/bmj.n18">was fairly controversial at the time</a> due to clinical trials using shorter gaps between doses.</p>
-<p>The delay between first and second doses will be an important component in our forecasts, so let's calculate when second doses are actually being given in practice (more precisely than "up to 12 weeks"). We can estimate this by determining the number of days until the total number of second doses (<code>cumSecond</code>) matches the total number of first doses (<code>cumFirst</code>) on a given date.</p>
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p>The delay between first and second doses will be an important component in our forecasts, so let's calculate when second doses are actually being given in practice (more precisely than "up to 12 weeks"). We can estimate this by determining the number of days until the total number of second doses (<code>cumSecond</code>) matches the total number of first doses (<code>cumFirst</code>) on a given date.
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    The for loop below calculates the delay for all dates in the past, and then prints the most recent delay:
+</div></p>
 
-The for loop below calculates the delay for all dates in the past, and then prints the most recent delay:
-</div>
 </div>
 </div>
 </div>
@@ -1467,11 +1465,12 @@ The for loop below calculates the delay for all dates in the past, and then prin
 <li>Once there is capacity to do so, second doses can be given sooner than <code>avg_second_delay</code> days later. <a href="https://www.gov.uk/government/publications/priority-groups-for-coronavirus-covid-19-vaccination-advice-from-the-jcvi-30-december-2020/joint-committee-on-vaccination-and-immunisation-advice-on-priority-groups-for-covid-19-vaccination-30-december-2020">Current UK guidance</a> is that second doses of the Pfizer vaccine can be administered after 3 weeks, or after 4 weeks for the AstraZeneca vaccine, and up to 12 weeks later for both.</li>
 <li>100% of the UK adult population will be vaccinated.</li>
 </ul>
-<p>These assumptions generally seem reasonable, but there are limitations with all of them. It's likely that <a href="https://www.bmj.com/content/372/bmj.n664">booster doses of Covid-19 vaccines will be needed</a>, so ultimately people may receive more than two doses (so we're predicting only the completion of the first phase of the UK vaccination programme). Alternatively, single-dose vaccines such as the <a href="https://www.bbc.co.uk/news/world-us-canada-56226979">Johnson &amp; Johnson vaccine</a> may start to be administered. New vaccine types coming online may also invalidate our third assumption above, as doses of a new vaccine can only be given as first doses initially - they can't be prioritised for second doses straight away like other vaccines (unless people begin to be given two doses of different vaccine types). Although it seems reasonable to give second doses earlier once there is spare capacity to do so, we don't know whether this will be the case and it may be that spare capacity is re-directed elsewhere. We've also seen that the delay between doses has varied between 71 and 77 days so far, but we initially keep it fixed at the most recent value of 77 days. Finally, vaccine <a href="https://www.gov.uk/government/speeches/statement-on-vaccination-progress-and-new-variants">uptake in the over 50s has been close to 95%</a> overall, but it's not 100% and has been much lower <a href="https://www.bbc.co.uk/news/health-55274833">in certain sub-groups</a> as discussed earlier. It's also possible uptake will decrease further in younger age groups. We should keep all these limitations in mind when interpreting our results.</p>
-<div style="background-color:#DEECFD; padding:10px; margin:10px;">
+<p>These assumptions generally seem reasonable, but there are limitations with all of them. It's likely that <a href="https://www.bmj.com/content/372/bmj.n664">booster doses of Covid-19 vaccines will be needed</a>, so ultimately people may receive more than two doses (so we're predicting only the completion of the first phase of the UK vaccination programme). Alternatively, single-dose vaccines such as the <a href="https://www.bbc.co.uk/news/world-us-canada-56226979">Johnson &amp; Johnson vaccine</a> may start to be administered. New vaccine types coming online may also invalidate our third assumption above, as doses of a new vaccine can only be given as first doses initially - they can't be prioritised for second doses straight away like other vaccines (unless people begin to be given two doses of different vaccine types). Although it seems reasonable to give second doses earlier once there is spare capacity to do so, we don't know whether this will be the case and it may be that spare capacity is re-directed elsewhere. We've also seen that the delay between doses has varied between 71 and 77 days so far, but we initially keep it fixed at the most recent value of 77 days. Finally, vaccine <a href="https://www.gov.uk/government/speeches/statement-on-vaccination-progress-and-new-variants">uptake in the over 50s has been close to 95%</a> overall, but it's not 100% and has been much lower <a href="https://www.bbc.co.uk/news/health-55274833">in certain sub-groups</a> as discussed earlier. It's also possible uptake will decrease further in younger age groups. We should keep all these limitations in mind when interpreting our results.
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    The <code>forecast_vaccines</code> function below encodes everything described above. We give the vaccination data so far (as the input <code>df</code>), add new rows for future dates up to a specified <code>end_date</code>, determine how many doses will be administered on each date using a function <code>doses_fn</code> (that we haven&#8217;t defined yet), and distributes those doses according to our assumptions. In many places the <code>timedelta</code> function from the python <code>datetime</code> library is used to get data from a number of days before the forecast date.
+</div></p>
 
-The `forecast_vaccines` function below encodes everything described above. We give the vaccination data so far (as the input `df`), add new rows for future dates up to a specified `end_date`, determine how many doses will be administered on each date using a function `doses_fn` (that we haven't defined yet), and distributes those doses according to our assumptions. In many places the `timedelta` function from the python `datetime` library is used to get data from a number of days before the forecast date.
-</div>
 </div>
 </div>
 </div>
@@ -1619,8 +1618,10 @@ The `forecast_vaccines` function below encodes everything described above. We gi
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Now all we need to run our forecast is to create the function to calculate how many doses are available each day. In this case it can be a simple function (<code>const_doses</code> below) that always returns the 0.49 million average daily doses calculated above. Even though we don't use them here, the function must have two inputs (<code>df</code> and <code>date</code>) to be compatible with our general <code>forecast_vaccines</code> function created above. Let's wrap all this into a function <code>forecast_const</code> we can easily use to run forecasts with other constant daily dose totals, then run it on our last week average:</p>
-</blockquote>
+<p><div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    Now all we need to run our forecast is to create the function to calculate how many doses are available each day. In this case it can be a simple function (<code>const_doses</code> below) that always returns the 0.49 million average daily doses calculated above. Even though we don&#8217;t use them here, the function must have two inputs (<code>df</code> and <code>date</code>) to be compatible with our general <code>forecast_vaccines</code> function created above. Let&#8217;s wrap all this into a function <code>forecast_const</code> we can easily use to run forecasts with other constant daily dose totals, then run it on our last week average:
+</div></p>
 
 </div>
 </div>
@@ -1793,9 +1794,11 @@ The `forecast_vaccines` function below encodes everything described above. We gi
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Alternative-Forecasts">Alternative Forecasts<a class="anchor-link" href="#Alternative-Forecasts"> </a></h2><p>Our forecast assumed doses will continue to be given at the rate from the the last two weeks, but looking back at the data we can see that this is higher than at most other times so far this year. Although it's possible the number of daily doses increases further in the future, we could consider that to be fairly optimistic. It may seem unlikely that vaccination rates fall to the levels seen at the start of the year, but there are reasons this could be the case. In particular, near the end of the vaccination programme demand may be lower in the remaining population, which <a href="https://time.com/5947967/israel-covid-vaccine-rollout/">was the case in Israel</a> earlier this year for example. So what if we ask a more pessimistic question - when will the population be vaccinated with two doses if vaccines are administered at the same rate as the whole year so far? Or, even better, what is the range of likely completion dates?</p>
-<p>To answer this, we'll create a new <code>doses_fn</code> (<code>rnd_doses</code> below) where the total number of doses given on any date in the future is the same as the number given on a day in the past, with that day selected randomly. We also limit the date in the past to have the same weekday as the forecast date, to take into account the differences during the week seen earlier (with more doses given Thursday-Saturday). Because the number of doses is chosen randomly, each time the forecast is run we'll get a different result. By running the forecast many times we can get an estimate of the uncertainty in the completion dates.</p>
-<blockquote><p>This is done using <code>forecast_rnd</code> function below, which returns a list of 200 forecasts:</p>
-</blockquote>
+<p>To answer this, we'll create a new <code>doses_fn</code> (<code>rnd_doses</code> below) where the total number of doses given on any date in the future is the same as the number given on a day in the past, with that day selected randomly. We also limit the date in the past to have the same weekday as the forecast date, to take into account the differences during the week seen earlier (with more doses given Thursday-Saturday). Because the number of doses is chosen randomly, each time the forecast is run we'll get a different result. By running the forecast many times we can get an estimate of the uncertainty in the completion dates.
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    This is done using <code>forecast_rnd</code> function below, which returns a list of 200 forecasts:
+</div></p>
 
 </div>
 </div>
@@ -1920,9 +1923,11 @@ The `forecast_vaccines` function below encodes everything described above. We gi
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Rather than plotting each of the 200 individual forecasts, let's calculate 50% (median), 2.5% and 97.5% quantiles of the forecasts, specifically of the cumulative total of first and second doses. 95% of the forecast values lie between the 2.5% and 97.5% quantiles, so we can be confident the future data will be in that range (but only under our assumption that vaccines are given at the same rate as the year so far).</p>
-<blockquote><p>To do that we can combine all the data for one column into a single data frame with the <code>pd.concat</code> function, then calculate the quantiles with the pandas <code>quantiles</code> function:</p>
-</blockquote>
+<p>Rather than plotting each of the 200 individual forecasts, let's calculate 50% (median), 2.5% and 97.5% quantiles of the forecasts, specifically of the cumulative total of first and second doses. 95% of the forecast values lie between the 2.5% and 97.5% quantiles, so we can be confident the future data will be in that range (but only under our assumption that vaccines are given at the same rate as the year so far). 
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    To do that we can combine all the data for one column into a single data frame with the <code>pd.concat</code> function, then calculate the quantiles with the pandas <code>quantiles</code> function:
+</div></p>
 
 </div>
 </div>
