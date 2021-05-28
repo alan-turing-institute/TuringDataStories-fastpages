@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      42 min read
+      43 min read
     
 </span></p>
 
@@ -1422,7 +1422,7 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
     <span class="n">avg_second_delay</span><span class="p">,</span>
     <span class="n">doses_fn</span><span class="p">,</span>
     <span class="n">uk_pop</span><span class="o">=</span><span class="n">priority_totals</span><span class="p">[</span><span class="s2">&quot;All Adults&quot;</span><span class="p">],</span>
-    <span class="n">end_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">end_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
     <span class="n">min_second_delay</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -1449,6 +1449,8 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
     <span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">future_dates</span><span class="p">:</span>
+        <span class="n">dose2_sofar</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;cumSecond&quot;</span><span class="p">]</span>
+
         <span class="k">if</span> <span class="n">d</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">avg_second_delay</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">first_data</span><span class="p">:</span>
             <span class="c1"># no 1st dose data avg_second_delay ago, assume no 2nd doses required</span>
             <span class="n">pending_2nd_doses</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1456,7 +1458,7 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
             <span class="c1"># 2nd doses needed is difference between 2nd doses so far and 1st</span>
             <span class="c1"># doses avg_second_delay days ago (who now require 2nd dose)</span>
             <span class="n">dose2_req</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">avg_second_delay</span><span class="p">),</span> <span class="s2">&quot;cumFirst&quot;</span><span class="p">]</span>
-            <span class="n">dose2_sofar</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;cumSecond&quot;</span><span class="p">]</span>
+
             <span class="n">pending_2nd_doses</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">dose2_req</span> <span class="o">-</span> <span class="n">dose2_sofar</span><span class="p">])</span>
 
         <span class="c1"># use forecasting function to determine number of doses available today</span>
@@ -1475,8 +1477,11 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
 
         <span class="c1"># if there are spare doses, try giving 2nd doses earlier than usual</span>
         <span class="k">if</span> <span class="n">dose1_today</span> <span class="o">+</span> <span class="n">dose2_today</span> <span class="o">&lt;</span> <span class="n">total_doses_today</span><span class="p">:</span>
-            <span class="n">dose2_poss_early</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">min_second_delay</span><span class="p">),</span> <span class="s2">&quot;cumFirst&quot;</span><span class="p">]</span>
-            <span class="n">dose2_today</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">total_doses_today</span> <span class="o">-</span> <span class="n">dose1_today</span><span class="p">,</span> <span class="n">dose2_poss_early</span><span class="p">)</span>
+
+
+            <span class="n">dose2_early_req</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">min_second_delay</span><span class="p">),</span> <span class="s2">&quot;cumFirst&quot;</span><span class="p">]</span>
+            <span class="n">dose2_early_pending</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">dose2_early_req</span> <span class="o">-</span> <span class="n">dose2_sofar</span><span class="p">])</span>
+            <span class="n">dose2_today</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">total_doses_today</span> <span class="o">-</span> <span class="n">dose1_today</span><span class="p">,</span> <span class="n">dose2_early_pending</span><span class="p">)</span>
 
         <span class="c1"># save today&#39;s values</span>
         <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span><span class="p">,</span> <span class="s2">&quot;newSecond&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dose2_today</span>
@@ -2015,7 +2020,7 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
     <span class="n">scenario</span><span class="o">=</span><span class="s2">&quot;fast&quot;</span><span class="p">,</span>
     <span class="n">uk_pop</span><span class="o">=</span><span class="n">priority_totals</span><span class="p">[</span><span class="s2">&quot;All Adults&quot;</span><span class="p">],</span>
     <span class="n">end_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-    <span class="n">min_second_delay</span><span class="o">=</span><span class="mi">77</span><span class="p">,</span>
+    <span class="n">min_second_delay</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Forecast vaccines for the SAGE &#39;fast&#39; and &#39;slow&#39; scenarios.</span>
@@ -2143,7 +2148,8 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The SAGE forecasts are similar to our more pessimistic forecasts, with the population fully vaccinated in mid-September, though the difference between their "slow" and "fast" strategies is smaller than the uncertainty we calculated. This gives us confidence that our forecasting approaches are reasonable, though it's interesting that SAGE does not expect the current rate of vaccinations to be maintained. It may be that they are aware of upcoming difficulties in vaccine supplies, or simply that taking a cautious approach is more appropriate for their purposes.</p>
-<p>We've also included markers in the figure above that show the current status on 16th May, the time of publication. The actual values look similar to our forecast values, but there have actually been more total doses (first and second combined) overall than we predicted, with 6.7 million doses since the 4th May. In comparison, our optimistic forecast using the average doses in the 2 weeks leading up to 4th May predicted 6.4 million doses, or 5.7 million in our pessimistic forecast using the average rate from the whole year so far (the SAGE scenarios are 5.6 million and 6.0 million). However, we have correctly predicted how many second doses would be given by this stage - 4.66 million compared to 4.65 million in our forecasts assuming an eleven week gap between doses. We look forward to seeing how this develops, and plan to do a story in the future to evaluate how well our forecasts performed!</p>
+<p>We should also note that we've allowed vaccines to be given sooner than 11 weeks in the latter stages of the programme in our "SAGE forecasts" above, but the original SAGE report does not account for this. If second doses are not given earlier it would push the completion dates of all our forecasts back a few weeks to early to mid-October, potentially missing the government target.</p>
+<p>Finally, we've included markers in the figure above that show the current status on 16th May, the time of publication. The actual values look similar to our forecast values, but there have actually been more total doses (first and second combined) overall than we predicted, with 6.7 million doses since the 4th May. In comparison, our optimistic forecast using the average doses in the 2 weeks leading up to 4th May predicted 6.4 million doses, or 5.7 million in our pessimistic forecast using the average rate from the whole year so far (the SAGE scenarios are 5.6 million and 6.0 million). However, we have correctly predicted how many second doses would be given by this stage - 4.66 million compared to 4.65 million in our forecasts assuming an eleven week gap between doses. We look forward to seeing how this develops, and plan to do a story in the future to evaluate how well our forecasts performed!</p>
 
 </div>
 </div>
@@ -2152,7 +2158,7 @@ Name: 2021-05-03 00:00:00, dtype: float64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2><p>In this Turing Data Story, we have used data collected from the UK government's Covid-19 data dashboard (using their API) to estimate when the UK may finish fully vaccinating its adult population.</p>
 <p>With the demands and challenges of worldwide vaccine supply, it's difficult to accurately estimate how many vaccine doses will be available in the future, so we generated two sets of forecasts - a more optimistic forecast assuming that vaccines will continue to be given at an average of 0.49 million doses per day, which was the rate in the two weeks up to the 4th of May, and a more pessimistic forecast assuming vaccines are given at a rate consistent with the whole year so far. In our optimistic forecast the population is fully vaccinated on 26th August, or in our pessimistic forecasts a few weeks later in mid-September. Our pessimistic forecast is broadly in agreement with the assumptions in modelling by SAGE and with government targets.</p>
-<p>As well as the uncertainty in future vaccine supply and demand, our forecasts made a number of simple assumptions about the vaccine roll-out which may not prove to be correct. We assumed 100% of the adult population will be vaccinated, for example, but we know take up rates are lower in certain sub-groups and it may be that take up will also be lower in younger people who are less at risk. In addition, we've assumed second doses will continue to be given 11-weeks after first doses, and haven't considered differences between current and new vaccine types (which may have different dosing regimens) or regional differences. Finally, our forecasts assume constant vaccination rates, but a model incorporating the possibility of upward or downward trends may be more accurate. All these combined mean the range of feasible completion dates is wider than we've calculated.</p>
+<p>As well as the uncertainty in future vaccine supply and demand, our forecasts made a number of simple assumptions about the vaccine roll-out which may not prove to be correct. We assumed 100% of the adult population will be vaccinated, for example, but we know take up rates are lower in certain sub-groups and it may be that take up will also be lower in younger people who are less at risk. In addition, we haven't considered differences between current and new vaccine types (which may have different dosing regimens) or regional differences. Our forecasts also  assume constant vaccination rates, but a model incorporating the possibility of upward or downward trends may be more accurate. Finally, once the whole adult population has been vaccinated with a first dose we've assumed second doses will start to be given earlier than 11-weeks, but we don't know whether this will be the case. All these combined mean the range of feasible completion dates is wider than we've calculated.</p>
 <p>Nevertheless, we can be hopeful that the majority of the population will be vaccinated by early autumn, and that life in the UK will be much less impacted by Covid-19 on a daily basis by that time, though it's difficult to say whether it will return back to what was considered to be "normal" before 2020! Finishing by the autumn would also be perfect timing for the <a href="https://www.bmj.com/content/373/bmj.n1116">anticipated start of giving further booster doses</a> to the most vulnerable in time for winter.</p>
 <p>Worldwide, Covid-19 case rates are sadly still high and vaccination rates low in many countries at the time of writing. This <a href="https://ourworldindata.org/covid-vaccinations#source-information-country-by-country">excellent dashboard from Our World in Data</a> shows vaccination progress worldwide, including links to data sources that (with some pre-processing) could also be fed into the forecasting functions developed here. For European countries, the European Centre for Disease Prevention and Control has <a href="https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea">a combined dataset available</a>. Do feel free to experiment with the code from this story; ideas could include looking at the forecast results for different dates in the past (by changing <code>run_as_date</code>), using data from other countries, or trying different forecasting algorithms, for example. Thanks for reading!</p>
 
